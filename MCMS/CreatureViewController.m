@@ -34,9 +34,20 @@
 - (IBAction)onEditButtonTapped:(UIButton *)sender {
     if ([sender.currentTitle isEqualToString:@"Edit"]) {
         [sender setTitle:@"Done" forState:UIControlStateNormal];
-      
+        [self textFieldShouldBeginEditing:self.creatureNameField];
+        [self textFieldShouldBeginEditing:self.weaponField];
+        [self textFieldShouldBeginEditing:self.bloodLustField];
+        [self textFieldShouldBeginEditing:self.hobbiesfield];
+        
     }
-    else {[sender setTitle:@"Edit" forState:UIControlStateNormal];
+    else {
+        [sender setTitle:@"Edit" forState:UIControlStateNormal];
+        [self.view endEditing:YES];
+        [self textFieldShouldBeginEditing:self.creatureNameField];
+        [self textFieldShouldBeginEditing:self.weaponField];
+        [self textFieldShouldBeginEditing:self.bloodLustField];
+        [self textFieldShouldBeginEditing:self.hobbiesfield];
+        [self.view endEditing:YES];
       
     }
 }
@@ -44,9 +55,11 @@
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField{
     if ([self.editButton.currentTitle isEqualToString:@"Edit"]){
         return NO;
-    } else {
+    } else if ([self.editButton.currentTitle isEqualToString:@"Done"]){
         return YES;
-    }
+    } else
+        return NO;
+    
 }
 
 
