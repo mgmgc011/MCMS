@@ -11,5 +11,10 @@
 @interface MagicalCreature : NSObject
 
 @property NSString *creatureName;
+@property int bloodLust;
+@property NSString *creatureWeapon;
+@property NSString *hobbies;
+
+-(instancetype) initWithName:(NSString *)name andWeapon:(NSString *)weapon andBloodLust:(int)level andHobbies:(NSString *)hobbies;
 
 @end

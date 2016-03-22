@@ -17,6 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.creatureNameLabel.text = self.magicalCreature.creatureName;
 }
 
 

@@ -10,4 +10,16 @@
 
 @implementation MagicalCreature
 
+-(instancetype) initWithName:(NSString *)name andWeapon:(NSString *)weapon andBloodLust:(int) level andHobbies:(NSString *)hobbies {
+    self = [super init];
+    if (self) {
+        self.creatureName = name;
+        self.creatureWeapon = weapon;
+        self.bloodLust = level;
+        self.hobbies = hobbies;
+ 
+    }
+    return self;
+}
+
 @end

@@ -22,8 +22,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.creatures = [NSMutableArray arrayWithObjects:@"Bald Eagle", @"Elephant", @"Chicken", @"Chimp", nil ];
-    
+     MagicalCreature *mosDef = [[MagicalCreature alloc] initWithName:@"Mos Def" andWeapon:@"The mike" andBloodLust:9001 andHobbies:@"Ruining fellow rappers' careers"];
+    [self.creatures addObject:mosDef];
 }
 
 
@@ -34,7 +34,8 @@
 
 -(UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CellID" forIndexPath:indexPath];
-    cell.textLabel.text = self.creatures[indexPath.row];
+    MagicalCreature *creature = [self.creatures objectAtIndex:indexPath.row];
+    cell.textLabel.text = creature.creatureName;
     
     
     return cell;
