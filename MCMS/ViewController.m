@@ -7,8 +7,14 @@
 //
 
 #import "ViewController.h"
+#import "MagicalCreature.h"
+#import "CreatureViewController.h"
 
-@interface ViewController ()
+@interface ViewController () <UITableViewDataSource, UITableViewDelegate>
+
+@property (weak, nonatomic) IBOutlet UITextField *textField;
+@property NSMutableArray *creatures;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
 
@@ -16,12 +22,37 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    self.creatures = [NSMutableArray arrayWithObjects:@"Bald Eagle", @"Elephant", @"Chicken", @"Chimp", nil ];
+    
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.creatures.count;
+}
+
+
+-(UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CellID" forIndexPath:indexPath];
+    cell.textLabel.text = self.creatures[indexPath.row];
+    
+    
+    return cell;
+}
+
+- (IBAction)onAddButtonPressed:(UIButton *)sender {
+    [self.creatures addObject:self.textField.text];
+    [self.tableView reloadData];
+    self.textField.text = @"";
+    
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(UITableViewCell *)sender {
+    NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
+    MagicalCreature *creature = self.creatures[indexPath.row];
+    CreatureViewController *destination = segue.destinationViewController;
+    destination.magicalCreature = creature;
+    
 }
 
 @end
