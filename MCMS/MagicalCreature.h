@@ -6,7 +6,7 @@
 //  Copyright © 2016 Mingu Chu. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface MagicalCreature : NSObject
 
@@ -14,7 +14,8 @@
 @property int bloodLust;
 @property NSString *creatureWeapon;
 @property NSString *hobbies;
+@property UIImage *creatureImage;
 
--(instancetype) initWithName:(NSString *)name andWeapon:(NSString *)weapon andBloodLust:(int)level andHobbies:(NSString *)hobbies;
+-(instancetype) initWithName:(NSString *)name andWeapon:(NSString *)weapon andBloodLust:(int)level andHobbies:(NSString *)hobbies andimage:(UIImage *)image;
 
 @end

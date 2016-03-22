@@ -15,6 +15,7 @@
 		7BF0F3391CA1CFFD004EACD8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BF0F3371CA1CFFD004EACD8 /* LaunchScreen.storyboard */; };
 		7BF0F3421CA1D117004EACD8 /* MagicalCreature.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BF0F3411CA1D117004EACD8 /* MagicalCreature.m */; };
 		7BF0F3451CA1D476004EACD8 /* CreatureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BF0F3441CA1D476004EACD8 /* CreatureViewController.m */; };
+		7BF0F3481CA1FDBD004EACD8 /* BattleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BF0F3471CA1FDBD004EACD8 /* BattleViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,8 @@
 		7BF0F3411CA1D117004EACD8 /* MagicalCreature.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MagicalCreature.m; sourceTree = "<group>"; };
 		7BF0F3431CA1D476004EACD8 /* CreatureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreatureViewController.h; sourceTree = "<group>"; };
 		7BF0F3441CA1D476004EACD8 /* CreatureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreatureViewController.m; sourceTree = "<group>"; };
+		7BF0F3461CA1FDBD004EACD8 /* BattleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BattleViewController.h; sourceTree = "<group>"; };
+		7BF0F3471CA1FDBD004EACD8 /* BattleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BattleViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +76,8 @@
 				7BF0F3321CA1CFFD004EACD8 /* Main.storyboard */,
 				7BF0F3431CA1D476004EACD8 /* CreatureViewController.h */,
 				7BF0F3441CA1D476004EACD8 /* CreatureViewController.m */,
+				7BF0F3461CA1FDBD004EACD8 /* BattleViewController.h */,
+				7BF0F3471CA1FDBD004EACD8 /* BattleViewController.m */,
 				7BF0F3351CA1CFFD004EACD8 /* Assets.xcassets */,
 				7BF0F3371CA1CFFD004EACD8 /* LaunchScreen.storyboard */,
 				7BF0F33A1CA1CFFD004EACD8 /* Info.plist */,
@@ -161,6 +166,7 @@
 			files = (
 				7BF0F3311CA1CFFD004EACD8 /* ViewController.m in Sources */,
 				7BF0F3421CA1D117004EACD8 /* MagicalCreature.m in Sources */,
+				7BF0F3481CA1FDBD004EACD8 /* BattleViewController.m in Sources */,
 				7BF0F32E1CA1CFFD004EACD8 /* AppDelegate.m in Sources */,
 				7BF0F3451CA1D476004EACD8 /* CreatureViewController.m in Sources */,
 				7BF0F32B1CA1CFFD004EACD8 /* main.m in Sources */,

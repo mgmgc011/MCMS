@@ -100,6 +100,100 @@
             </objects>
             <point key="canvasLocation" x="1321.5" y="976"/>
         </scene>
+        <!--Battle View Controller-->
+        <scene sceneID="DaD-Xm-FHS">
+            <objects>
+                <viewController id="mq9-2e-Laq" customClass="BattleViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6Lz-fr-et9"/>
+                        <viewControllerLayoutGuide type="bottom" id="OVI-Aq-cA9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fXb-wE-DeA">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gw5-m5-jVU">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="80" y="99" width="240" height="128"/>
+                                </variation>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ePb-n0-uaw">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="80" y="362" width="240" height="128"/>
+                                </variation>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="leC-Rc-4Ob">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="179" y="235" width="42" height="21"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uyt-uD-NAf">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="179" y="333" width="42" height="21"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jvk-MX-ZWX">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="189" y="289" width="22" height="21"/>
+                                </variation>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ygk-wc-3uQ">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Fight"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="340" y="285" width="35" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="onFightButtonTapped:" destination="mq9-2e-Laq" eventType="touchUpInside" id="mLI-b0-jYB"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="gw5-m5-jVU"/>
+                                <exclude reference="ePb-n0-uaw"/>
+                                <exclude reference="leC-Rc-4Ob"/>
+                                <exclude reference="Uyt-uD-NAf"/>
+                                <exclude reference="jvk-MX-ZWX"/>
+                                <exclude reference="Ygk-wc-3uQ"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="gw5-m5-jVU"/>
+                                <include reference="ePb-n0-uaw"/>
+                                <include reference="leC-Rc-4Ob"/>
+                                <include reference="Uyt-uD-NAf"/>
+                                <include reference="jvk-MX-ZWX"/>
+                                <include reference="Ygk-wc-3uQ"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="LabelB" destination="Uyt-uD-NAf" id="smN-e3-fsY"/>
+                        <outlet property="imageViewA" destination="gw5-m5-jVU" id="LZb-aF-Vs3"/>
+                        <outlet property="imageViewB" destination="ePb-n0-uaw" id="QwM-D7-Uei"/>
+                        <outlet property="labelA" destination="leC-Rc-4Ob" id="Ktd-zi-2el"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AaX-QP-0Jk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2101.5" y="239"/>
+        </scene>
         <!--Creature View Controller-->
         <scene sceneID="Ob4-A1-qHB">
             <objects>
@@ -199,6 +293,16 @@
                                     <rect key="frame" x="80" y="138" width="240" height="128"/>
                                 </variation>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zay-Ek-Nyt">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Battle"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="20" y="138" width="46" height="30"/>
+                                </variation>
+                                <connections>
+                                    <segue destination="mq9-2e-Laq" kind="show" id="JBo-KW-K48"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -212,6 +316,7 @@
                                 <exclude reference="QvG-Gg-uEp"/>
                                 <exclude reference="OHE-ir-rpZ"/>
                                 <exclude reference="dzD-Gl-ZPO"/>
+                                <exclude reference="Zay-Ek-Nyt"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -225,6 +330,7 @@
                                 <include reference="QvG-Gg-uEp"/>
                                 <include reference="OHE-ir-rpZ"/>
                                 <include reference="dzD-Gl-ZPO"/>
+                                <include reference="Zay-Ek-Nyt"/>
                             </mask>
                         </variation>
                     </view>

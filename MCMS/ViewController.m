@@ -23,11 +23,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.creatures = [[NSMutableArray alloc] init];
-     MagicalCreature *mosDef = [[MagicalCreature alloc] initWithName:@"Mos Def" andWeapon:@"The mike" andBloodLust:9001 andHobbies:@"Ruining fellow rappers' careers"];
-    MagicalCreature *baldEagle = [[MagicalCreature alloc] initWithName:@"Bald Eagle" andWeapon:@"Freedom" andBloodLust:5000 andHobbies:@"FREE BIRD!!!"];
-    MagicalCreature *chimp= [[MagicalCreature alloc] initWithName:@"Chimp" andWeapon:@"Banana" andBloodLust:17 andHobbies:@"Monkey business"];
-    MagicalCreature *kungFuChicken = [[MagicalCreature alloc] initWithName:@"Kung Fu Chicken" andWeapon:@"Soy Sauce" andBloodLust:2 andHobbies:@"Cooking, strutting"];
-    MagicalCreature *gorgorath = [[MagicalCreature alloc] initWithName:@"Gorgorath the World Smasher" andWeapon:@"The Pillar of Doom" andBloodLust:8999 andHobbies:@"Harvesting planets for their resources, poetry slams"];
+    MagicalCreature *mosDef = [[MagicalCreature alloc] initWithName:@"Mos Def" andWeapon:@"The mike" andBloodLust:9001 andHobbies:@"Ruining fellow rappers' careers" andimage:[UIImage imageNamed:@"MosDef"]];
+    MagicalCreature *baldEagle = [[MagicalCreature alloc] initWithName:@"Bald Eagle" andWeapon:@"Freedom" andBloodLust:5000 andHobbies:@"FREE BIRD!!!" andimage:[UIImage imageNamed:@"BaldEagle"]];
+    MagicalCreature *chimp= [[MagicalCreature alloc] initWithName:@"Chimp" andWeapon:@"Banana" andBloodLust:17 andHobbies:@"Monkey business" andimage:[UIImage imageNamed:@"Chimp"]];
+    MagicalCreature *kungFuChicken = [[MagicalCreature alloc] initWithName:@"Kung Fu Chicken" andWeapon:@"Soy Sauce" andBloodLust:2 andHobbies:@"Cooking, strutting" andimage:[UIImage imageNamed:@"KungFuChicken"]];
+    MagicalCreature *gorgorath = [[MagicalCreature alloc] initWithName:@"Gorgorath the World Smasher" andWeapon:@"The Pillar of Doom" andBloodLust:8999 andHobbies:@"Harvesting planets for their resources, poetry slams" andimage:[UIImage imageNamed:@"Gorgorath"]];
     [self.creatures addObject:mosDef];
     [self.creatures addObject:baldEagle];
     [self.creatures addObject:chimp];
@@ -51,7 +51,7 @@
 }
 
 - (IBAction)onAddButtonPressed:(UIButton *)sender {
-    MagicalCreature *creature =[[MagicalCreature alloc] initWithName:self.textField.text andWeapon:@"" andBloodLust:0 andHobbies:@""];
+    MagicalCreature *creature =[[MagicalCreature alloc] initWithName:self.textField.text andWeapon:@"" andBloodLust:0 andHobbies:@"" andimage:nil];
     [self.creatures addObject:creature];
     [self.tableView reloadData];
     self.textField.text = @"";
