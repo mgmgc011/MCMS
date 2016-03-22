@@ -8,13 +8,16 @@
 
 #import "CreatureViewController.h"
 
-@interface CreatureViewController () <UITextFieldDelegate>
+@interface CreatureViewController () <UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UITextField *creatureNameField;
 @property (weak, nonatomic) IBOutlet UIButton *editButton;
 @property (weak, nonatomic) IBOutlet UITextField *weaponField;
 @property (weak, nonatomic) IBOutlet UITextField *bloodLustField;
 @property (weak, nonatomic) IBOutlet UITextField *hobbiesfield;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property NSMutableArray *creatureAttributes;
+
 
 @end
 
@@ -30,25 +33,21 @@
     [self textFieldShouldBeginEditing:self.weaponField];
     [self textFieldShouldBeginEditing:self.bloodLustField];
     [self textFieldShouldBeginEditing:self.hobbiesfield];
+    
+    NSLog(@"%@", self.magicalCreature.creatureWeapon);
+    self.creatureAttributes[0] = [NSString stringWithFormat:@"Weapon %@", self.magicalCreature.creatureWeapon];
+    self.creatureAttributes[1] = [NSString stringWithFormat:@"Power Level %i", self.magicalCreature.bloodLust];
+    self.creatureAttributes[2] = [NSString stringWithFormat:@"Hobbies %@", self.magicalCreature.hobbies];
+
 }
 - (IBAction)onEditButtonTapped:(UIButton *)sender {
     if ([sender.currentTitle isEqualToString:@"Edit"]) {
         [sender setTitle:@"Done" forState:UIControlStateNormal];
-        [self textFieldShouldBeginEditing:self.creatureNameField];
-        [self textFieldShouldBeginEditing:self.weaponField];
-        [self textFieldShouldBeginEditing:self.bloodLustField];
-        [self textFieldShouldBeginEditing:self.hobbiesfield];
-        
     }
     else {
         [sender setTitle:@"Edit" forState:UIControlStateNormal];
         [self.view endEditing:YES];
-        [self textFieldShouldBeginEditing:self.creatureNameField];
-        [self textFieldShouldBeginEditing:self.weaponField];
-        [self textFieldShouldBeginEditing:self.bloodLustField];
-        [self textFieldShouldBeginEditing:self.hobbiesfield];
-        [self.view endEditing:YES];
-      
+
     }
 }
 
@@ -62,5 +61,17 @@
     
 }
 
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.creatureAttributes.count;
+}
+
+-(UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CellID" forIndexPath:indexPath];
+    MagicalCreature *creature = [self.creatureAttributes objectAtIndex:indexPath.row];
+    cell.textLabel.text = creature.creatureName;
+    
+    
+    return cell;
+}
 
 @end

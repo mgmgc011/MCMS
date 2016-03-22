@@ -133,109 +133,48 @@
                                     <outlet property="delegate" destination="Dg3-Gg-FdQ" id="CRy-rh-2x1"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PM4-xW-OlH">
-                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="116" y="390" width="220" height="30"/>
-                                </variation>
-                                <connections>
-                                    <outlet property="delegate" destination="Dg3-Gg-FdQ" id="Glu-o1-3Nx"/>
-                                </connections>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vcq-3I-YuD">
-                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="116" y="450" width="220" height="30"/>
-                                </variation>
-                                <connections>
-                                    <outlet property="delegate" destination="Dg3-Gg-FdQ" id="puA-Z5-UD2"/>
-                                </connections>
-                            </textField>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7R0-vW-gk7">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="l46-gX-BGw">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="0J5-mK-aqo">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0J5-mK-aqo" id="dBm-uy-EB2">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="76" y="154" width="240" height="128"/>
-                                </variation>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weapon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SCY-kB-Ky2">
-                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="14" y="343" width="63" height="21"/>
-                                </variation>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Power" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aoj-Df-2Rp">
-                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="14" y="393" width="48" height="21"/>
-                                </variation>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hobbies" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BUf-1x-pYt">
-                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="14" y="453" width="64" height="21"/>
-                                </variation>
-                            </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="teg-ai-OXl">
-                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="116" y="334" width="220" height="30"/>
+                                    <rect key="frame" x="0.0" y="252" width="400" height="304"/>
                                 </variation>
                                 <connections>
-                                    <outlet property="delegate" destination="Dg3-Gg-FdQ" id="K14-sg-Pot"/>
+                                    <outlet property="dataSource" destination="Dg3-Gg-FdQ" id="3Vk-vW-HH3"/>
+                                    <outlet property="delegate" destination="Dg3-Gg-FdQ" id="kAP-TQ-2Hn"/>
                                 </connections>
-                            </textField>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="hgc-VB-27J"/>
                                 <exclude reference="H67-Zk-HHR"/>
-                                <exclude reference="PM4-xW-OlH"/>
-                                <exclude reference="vcq-3I-YuD"/>
-                                <exclude reference="7R0-vW-gk7"/>
-                                <exclude reference="SCY-kB-Ky2"/>
-                                <exclude reference="aoj-Df-2Rp"/>
-                                <exclude reference="BUf-1x-pYt"/>
-                                <exclude reference="teg-ai-OXl"/>
+                                <exclude reference="l46-gX-BGw"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="hgc-VB-27J"/>
                                 <include reference="H67-Zk-HHR"/>
-                                <include reference="PM4-xW-OlH"/>
-                                <include reference="vcq-3I-YuD"/>
-                                <include reference="7R0-vW-gk7"/>
-                                <include reference="SCY-kB-Ky2"/>
-                                <include reference="aoj-Df-2Rp"/>
-                                <include reference="BUf-1x-pYt"/>
-                                <include reference="teg-ai-OXl"/>
+                                <include reference="l46-gX-BGw"/>
                             </mask>
                         </variation>
                     </view>
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="bloodLustField" destination="PM4-xW-OlH" id="Ri2-AS-y3J"/>
                         <outlet property="creatureNameField" destination="H67-Zk-HHR" id="xDE-1S-b3S"/>
                         <outlet property="editButton" destination="hgc-VB-27J" id="thm-bV-YAN"/>
-                        <outlet property="hobbiesfield" destination="vcq-3I-YuD" id="j6Q-PI-sy7"/>
-                        <outlet property="weaponField" destination="teg-ai-OXl" id="lpi-hS-sGl"/>
+                        <outlet property="tableView" destination="l46-gX-BGw" id="04J-Jn-Peh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WFi-PW-HAV" userLabel="First Responder" sceneMemberID="firstResponder"/>
