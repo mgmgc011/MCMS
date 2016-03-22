@@ -35,9 +35,27 @@
     [self textFieldShouldBeginEditing:self.weaponField];
     [self textFieldShouldBeginEditing:self.bloodLustField];
     [self textFieldShouldBeginEditing:self.hobbiesField];
-   
+    
+    if ([self.creatureNameField.text isEqualToString:@"Mos Def"]) {
+        self.creatureImage.image = [UIImage imageNamed:@"MosDef"];
+    } else if ([self.creatureNameField.text isEqualToString:@"Bald Eagle"]) {
+        self.creatureImage.image = [UIImage imageNamed:@"BaldEagle"];
 
+    } else if ([self.creatureNameField.text isEqualToString:@"Chimp"]) {
+        self.creatureImage.image = [UIImage imageNamed:@"Chimp"];
+        
+    }else if ([self.creatureNameField.text isEqualToString:@"Kung Fu Chicken"]) {
+        self.creatureImage.image = [UIImage imageNamed:@"KungFuChicken"];
+        
+    }else if ([self.creatureNameField.text isEqualToString:@"Gorgorath the World Smasher"]) {
+        self.creatureImage.image = [UIImage imageNamed:@"Gorgorath"];
+        
+    }
+    
 }
+
+
+    
 - (IBAction)onEditButtonTapped:(UIButton *)sender {
     if ([sender.currentTitle isEqualToString:@"Edit"]) {
         [sender setTitle:@"Done" forState:UIControlStateNormal];
