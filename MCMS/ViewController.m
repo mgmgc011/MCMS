@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "MagicalCreature.h"
 #import "CreatureViewController.h"
+#import "BattleViewController.h"
 
 @interface ViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -59,11 +60,22 @@
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(UITableViewCell *)sender {
+    if([[segue identifier] isEqualToString:@"ShowCreatureSegue"]) {
+        
     NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
     MagicalCreature *creature = self.creatures[indexPath.row];
     CreatureViewController *destination = segue.destinationViewController;
     destination.magicalCreature = creature;
-    
+    }
+    else {
+
+        BattleViewController *destination = segue.destinationViewController;
+        MagicalCreature *creature1 = self.creatures[0];
+        MagicalCreature *creature2 = self.creatures[1];
+        destination.creature1 = creature1;
+        destination.creature2 = creature2;
+        
+    }
 }
 
 @end

@@ -7,9 +7,11 @@
 //
 
 #import "ViewController.h"
+#import "MagicalCreature.h"
 
 @interface BattleViewController : ViewController
 
-@property NSMutableArray *battleArray;
+@property MagicalCreature *creature1;
+@property MagicalCreature *creature2;
 
 @end

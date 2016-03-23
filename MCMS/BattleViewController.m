@@ -14,8 +14,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *imageViewB;
 @property (weak, nonatomic) IBOutlet UILabel *labelA;
 @property (weak, nonatomic) IBOutlet UILabel *LabelB;
-@property MagicalCreature *creature1;
-@property MagicalCreature *creature2;
+
 
 @end
 
@@ -23,8 +22,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.creature1 = self.battleArray[0];
-    self.creature2 = self.battleArray[1];
     self.imageViewA.image = self.creature1.creatureImage;
     self.imageViewB.image = self.creature2.creatureImage;
     self.labelA.text = self.creature1.creatureName;
