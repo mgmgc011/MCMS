@@ -30,8 +30,8 @@
 
 }
 - (IBAction)onFightButtonTapped:(UIButton *)sender {
-    UIAlertController *victory = [UIAlertController alertControllerWithTitle:[NSString stringWithFormat:@"%@", self.creature1.creatureName] message:nil preferredStyle:UIAlertControllerStyleAlert];
-    UIAlertController *victory2 = [UIAlertController alertControllerWithTitle:[NSString stringWithFormat:@"%@", self.creature2.creatureName] message:nil preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertController *victory = [UIAlertController alertControllerWithTitle:[NSString stringWithFormat:@"%@ Win!", self.creature1.creatureName] message:nil preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertController *victory2 = [UIAlertController alertControllerWithTitle:[NSString stringWithFormat:@"%@ Win!", self.creature2.creatureName] message:nil preferredStyle:UIAlertControllerStyleAlert];
     UIAlertController *tie = [UIAlertController alertControllerWithTitle:[NSString stringWithFormat:@"It's a Tie!"] message:nil preferredStyle:UIAlertControllerStyleAlert];
     
     UIAlertAction *goBack = [UIAlertAction actionWithTitle:@"Go Back" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {

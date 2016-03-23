@@ -24,7 +24,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.creatures = [[NSMutableArray alloc] init];
-    MagicalCreature *mosDef = [[MagicalCreature alloc] initWithName:@"Mos Def" andWeapon:@"The mike" andBloodLust:9001 andHobbies:@"Ruining fellow rappers' careers" andimage:[UIImage imageNamed:@"MosDef"]];
+    MagicalCreature *mosDef = [[MagicalCreature alloc] initWithName:@"Mos Def" andWeapon:@"The mike" andBloodLust:5000 andHobbies:@"Ruining fellow rappers' careers" andimage:[UIImage imageNamed:@"MosDef"]];
     MagicalCreature *baldEagle = [[MagicalCreature alloc] initWithName:@"Bald Eagle" andWeapon:@"Freedom" andBloodLust:5000 andHobbies:@"FREE BIRD!!!" andimage:[UIImage imageNamed:@"BaldEagle"]];
     MagicalCreature *chimp= [[MagicalCreature alloc] initWithName:@"Chimp" andWeapon:@"Banana" andBloodLust:17 andHobbies:@"Monkey business" andimage:[UIImage imageNamed:@"Chimp"]];
     MagicalCreature *kungFuChicken = [[MagicalCreature alloc] initWithName:@"Kung Fu Chicken" andWeapon:@"Soy Sauce" andBloodLust:2 andHobbies:@"Cooking, strutting" andimage:[UIImage imageNamed:@"KungFuChicken"]];
@@ -37,6 +37,8 @@
     [self.tableView reloadData];
     NSLog(@"%@", self.creatures);
 }
+
+
 
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -66,16 +68,19 @@
     MagicalCreature *creature = self.creatures[indexPath.row];
     CreatureViewController *destination = segue.destinationViewController;
     destination.magicalCreature = creature;
-    }
-    else {
-
+    } else {
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        [self.tableView selectRowAtIndexPath:indexPath animated:NO scrollPosition:UITableViewScrollPositionMiddle];
+        NSInteger i = indexPath.row;
+        
         BattleViewController *destination = segue.destinationViewController;
-        MagicalCreature *creature1 = self.creatures[0];
-        MagicalCreature *creature2 = self.creatures[1];
+        MagicalCreature *creature1 = self.creatures[i];
+        MagicalCreature *creature2 = self.creatures[i];
         destination.creature1 = creature1;
         destination.creature2 = creature2;
         
     }
 }
+
 
 @end
